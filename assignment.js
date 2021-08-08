@@ -1,12 +1,8 @@
 // Problem 1
 function seerToMon(seer) {
-    // Check if input is string or not. Return error if its string.
-    if (typeof seer == "string") {
-        return "ERROR: Provide Numbers only to covert Seer into Mon";
-    }
-    // Check if input is positive or not. Return error if its negative.
-    else if (seer <= 0) {
-        return "ERROR: Seer amount cannot be negative values";
+    // Check if inputs are anything other than numbers or a negative value. Return error if it is.
+    if (typeof seer != "number" || seer < 0) {
+        return "ERROR: Invalid Value. Please provide only positive numbers as inputs";
     }
 
     var mon = seer / 40;
@@ -17,13 +13,13 @@ function seerToMon(seer) {
 // Problem 2
 function totalSales(shirts, pants, shoes) {
     // Check if inputs are anything other than numbers or a negative value. Return error if it is.
-    if (typeof shirts != "number" || shirts <= 0) {
+    if (typeof shirts != "number" || shirts < 0) {
         return "ERROR: Invalid shirts quantity. Please provide only positive numbers as inputs";
     }
-    else if (typeof pants != "number" || pants <= 0) {
+    else if (typeof pants != "number" || pants < 0) {
         return "ERROR: Invalid pants quantity. Please provide only positive numbers as inputs";
     }
-    else if (typeof shoes != "number" || shoes <= 0) {
+    else if (typeof shoes != "number" || shoes < 0) {
         return "ERROR: Invalid shoes quantity. Please provide only positive numbers as inputs";
     }
     // Declare item prices
@@ -40,7 +36,7 @@ function totalSales(shirts, pants, shoes) {
 // Problem 3
 function deliveryCost(orders) {
     // Check if input is anything other than numbers or a negative value. Return error if it is.
-    if (typeof orders != "number" || orders <= 0) {
+    if (typeof orders != "number" || orders < 0) {
         return "ERROR: Invalid orders quantity. Please provide only positive numbers as inputs";
     }
 
