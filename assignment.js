@@ -29,7 +29,7 @@ function seerToMon(seer) {
 
 
 // Problem 2
-function totalCost(shirts, pants, shoes) {
+function totalSales(shirts, pants, shoes) {
     // Check if inputs are anything other than numbers or a negative value. Return error if it is.
     if (typeof shirts != "number" || shirts <= 0) {
         return "ERROR: Invalid shirts quantity. Please provide only positive numbers as inputs";
@@ -54,22 +54,22 @@ function totalCost(shirts, pants, shoes) {
     Testing for Problem 4
 
     Test - 1:
-    console.log(totalCost(6, 6, 3));
+    console.log(totalSales(6, 6, 3));
     Output:
     3300
 
     Test - 2:
-    console.log(totalCost(6, 6, "a"));
+    console.log(totalSales(6, 6, "a"));
     Output:
     ERROR: Invalid shoes quantity. Please provide only positive numbers as inputs
 
     Test - 3:
-    console.log(totalCost(6, true, 3));
+    console.log(totalSales(6, true, 3));
     Output:
     ERROR: Invalid pants quantity. Please provide only positive numbers as inputs
 
     Test - 4:
-    console.log(totalCost(-6, 6, 3));
+    console.log(totalSales(-6, 6, 3));
     Output:
     ERROR: Invalid shirts quantity. Please provide only positive numbers as inputs
 ----------------------------------------------------------------------------------- */
@@ -82,30 +82,31 @@ function deliveryCost(orders) {
     }
 
     // Declare order delivery cost
-    const deliveryCost1 = 100;
-    const deliveryCost2 = 80;
-    const deliveryCost3 = 50;
+    const charge1 = 100;
+    const charge2 = 80;
+    const charge3 = 50;
 
     // Calculate total delivery cost
-    let totalDeliveryCost = 0;
+    let totalCharge = 0;
     for (var i = 0; i < orders; i++) {
         // Cost for first 100 orders
         if (i < 100) {
-            totalDeliveryCost += deliveryCost1;
+            totalCharge += charge1;
         }
         // Cost for orders between 100-200
         else if (i >= 100 && i < 200) {
-            totalDeliveryCost += deliveryCost2;
+            totalCharge += charge2;
         }
         // Cost for orders greater than 200
         else if (i >= 200) {
-            totalDeliveryCost += deliveryCost3;
+            totalCharge += charge3;
         }
     }
 
     // Return total delivery cost
-    return totalDeliveryCost;
+    return totalCharge;
 }
+
 /* --------------------------------------------------------------------------------
     Testing for Problem 3
 
