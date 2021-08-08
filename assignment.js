@@ -13,20 +13,6 @@ function seerToMon(seer) {
     return mon;
 }
 
-/* --------------------------------------------------
-    Testing for Problem 1
-
-    Test - 1:
-    console.log(seerToMon(527));
-    Output:
-    13.175
-
-    Test -2:
-    console.log(seerToMon("onekDhan"));
-    Output: 
-    ERROR: Provide Numbers only to covert Seer into Mon
---------------------------------------------------- */
-
 
 // Problem 2
 function totalSales(shirts, pants, shoes) {
@@ -50,29 +36,6 @@ function totalSales(shirts, pants, shoes) {
     return totalPrice;
 }
 
-/*------------------------------------------------------------------------------------
-    Testing for Problem 4
-
-    Test - 1:
-    console.log(totalSales(6, 6, 3));
-    Output:
-    3300
-
-    Test - 2:
-    console.log(totalSales(6, 6, "a"));
-    Output:
-    ERROR: Invalid shoes quantity. Please provide only positive numbers as inputs
-
-    Test - 3:
-    console.log(totalSales(6, true, 3));
-    Output:
-    ERROR: Invalid pants quantity. Please provide only positive numbers as inputs
-
-    Test - 4:
-    console.log(totalSales(-6, 6, 3));
-    Output:
-    ERROR: Invalid shirts quantity. Please provide only positive numbers as inputs
------------------------------------------------------------------------------------ */
 
 // Problem 3
 function deliveryCost(orders) {
@@ -107,20 +70,6 @@ function deliveryCost(orders) {
     return totalCharge;
 }
 
-/* --------------------------------------------------------------------------------
-    Testing for Problem 3
-
-    Test - 1:
-    console.log(deliveryCost(205));
-    Output:
-    18250
-
-    Test - 2:
-    console.log(deliveryCost(false));
-    Output:
-    ERROR: Invalid orders quantity. Please provide only positive numbers as inputs
------------------------------------------------------------------------------------ */
-
 // Problem 4
 function perfectFriend(friends) {
     // Check all elements of the array
@@ -130,22 +79,63 @@ function perfectFriend(friends) {
             console.log(name + " :: WARNING: Element is not a string. Skipping this element");
             continue;
         }
-        // // Check if the name is a string of length equal to 5. Return and stop the loop if found.
+        // // Check if the name is a string of length equal to 5.
         else if (name.length == 5) {
             return name;
-            break;
         }
     }
 }
 
 
-/* --------------------------------------------------------------------------------------
-    Testing for Problem 4
-    var myFriends = ["Abed", "Soma", 5, "Rumi", "Atik", true, "Sohan", "Fahim", "Hujur"];
-    console.log(perfectFriend(myFriends));
+/* ----------------------------
+    Testing all functions
+---------------------------- */
 
-    Output :
-    5 :: WARNING: Element is not a string. Skipping this element
-    true :: WARNING: Element is not a string. Skipping this element
-    Sohan
----------------------------------------------------------------------------------------- */
+//    Testing for Problem 1
+//    Test - 1:
+console.log(seerToMon(527));
+//    Output:
+//    13.175
+
+//    Test -2:
+console.log(seerToMon("onekDhan"));
+//    Output: 
+//    ERROR: Provide Numbers only to covert Seer into Mon
+
+//    Testing for Problem 2
+//    Test - 1:
+console.log(totalSales(6, 6, 3));
+//    Output:
+//    3300
+//    Test - 2:
+console.log(totalSales(6, 6, "a"));
+//    Output:
+//    ERROR: Invalid shoes quantity. Please provide only positive numbers as inputs
+//    Test - 3:
+console.log(totalSales(6, true, 3));
+//    Output:
+//    ERROR: Invalid pants quantity. Please provide only positive numbers as inputs
+//    Test - 4:
+console.log(totalSales(-6, 6, 3));
+//    Output:
+//    ERROR: Invalid shirts quantity. Please provide only positive numbers as inputs
+
+
+//    Testing for Problem 3
+//    Test - 1:
+console.log(deliveryCost(205));
+//    Output:
+//    18250
+//    Test - 2:
+console.log(deliveryCost(false));
+//    Output:
+//    ERROR: Invalid orders quantity. Please provide only positive numbers as inputs
+
+
+//    Testing for Problem 4
+var myFriends = ["Abed", "Soma", 5, "Rumi", "Atik", true, "Sohan", "Fahim", "Hujur"];
+console.log(perfectFriend(myFriends));
+//    Output :
+//    5 :: WARNING: Element is not a string. Skipping this element
+//    true :: WARNING: Element is not a string. Skipping this element
+//    Sohan
